@@ -132,8 +132,8 @@ const HEIGHT = 500;
                     tickSound.play();
                 }
                 lastTickAngle = angleOffset % (2 * Math.PI);
-				console.log("angles", tickAngle, angleOffset);
-				console.log(currentSpeed);
+				//console.log("angles", tickAngle, angleOffset);
+				//console.log(currentSpeed);
 				drawSlices();
 				requestAnimationFrame(rotate);
 			} else {
@@ -151,13 +151,16 @@ const HEIGHT = 500;
 
 	// Aggiungi evento click al pulsante
 	drawButton.addEventListener('click', () => {
+		if(isRotating)
+			return;
 		lines = textInput.value.split('\n');
 		drawSlices();
 	});
 
 	// Aggiungi evento click al canvas per iniziare la rotazione
 	roulette.addEventListener('click', () => {
-		if(lines.length === 0)
+		//console.log(lines)
+		if(lines.length === 0 || (lines[0] === '' && lines.length === 1) || isRotating)
 			return;
 		startRotation();
 	});
