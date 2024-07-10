@@ -6,6 +6,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "build": "tsc",
     "watch": "node watch.js"
   },
   "author": "Davide Baggio",

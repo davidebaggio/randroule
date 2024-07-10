@@ -134,6 +134,8 @@ const HEIGHT = 500;
     });
     // Aggiungi evento click al canvas per iniziare la rotazione
     roulette.addEventListener('click', () => {
+        if (lines.length === 0)
+            return;
         startRotation();
     });
 })();
