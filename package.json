@@ -1,0 +1,19 @@
+{
+  "name": "randroule",
+  "version": "1.0.0",
+  "description": "A roulette that extracts values amont a list of items.",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "watch": "node watch.js"
+  },
+  "author": "Davide Baggio",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "http-server": "^14.1.1",
+    "typescript": "^5.5.3",
+    "ws": "^8.18.0"
+  }
+}
